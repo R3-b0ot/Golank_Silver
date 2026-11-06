@@ -17,12 +17,12 @@
 body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;background-image:radial-gradient(#b8b8b2 .65px,transparent .65px);background-size:5px 5px;z-index:-1}
 .shell{width:min(1120px,calc(100% - 40px));margin:auto}.topline{height:5px;background:linear-gradient(90deg,#777b7e,#fff,#9b9fa2,#fefefe,#777b7e)}
 header{padding:28px 0 14px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit}.brand-logo{display:block;width:142px;height:76px;object-fit:contain;object-position:center}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit}.brand-lockup{display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;color:#898d8f;min-width:142px}.brand-lockup .brand-mark{font:600 30px/.9 "Cormorant Garamond",serif;letter-spacing:-.12em;padding-right:.12em;background:linear-gradient(135deg,#777b7e,#fff 48%,#8c9092);background-clip:text;-webkit-background-clip:text;color:transparent;text-shadow:0 1px #fff8}.brand-lockup .brand-name{font:500 25px/.95 "Cormorant Garamond",serif;letter-spacing:.19em;margin-left:.19em}.brand-lockup .brand-sub{font:600 8px/1.5 "DM Sans",sans-serif;letter-spacing:.42em;margin-left:.42em;color:#555a5c}
 .header-note{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-align:right}
 .hero{position:relative;margin:24px auto 26px;padding:68px 24px 64px;min-height:460px;display:flex;align-items:center;justify-content:center;text-align:center;isolation:isolate;border:1px solid #d1d1ce;background:linear-gradient(145deg,#faf9f5,#eeece6 60%,#f9f8f4);box-shadow:inset 0 0 0 5px #ffffff85,inset 0 0 0 6px #d9d8d3,var(--shadow);overflow:hidden}
 .hero:before,.hero:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;pointer-events:none;z-index:-1;background:repeating-radial-gradient(circle at center,transparent 0 5px,#b8b9b7 5.7px 6.7px,transparent 7.4px 12px);opacity:.5}
 .hero:before{top:-174px;left:-144px}.hero:after{bottom:-180px;right:-145px}
-.hero-content{max-width:700px}.eyebrow{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:#777b7e;margin:0 0 18px}
+.hero-content{max-width:700px}.hero-lockup{display:flex;flex-direction:column;align-items:center;line-height:1;margin:2px auto 0;color:#898d8f}.hero-lockup .hero-mark{font:600 clamp(72px,12vw,112px)/.82 "Cormorant Garamond",serif;letter-spacing:-.12em;padding-right:.12em;background:linear-gradient(135deg,#777b7e 8%,#fff 42%,#8c9092 60%,#fdfdfc 78%,#777b7e);background-clip:text;-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 1px 1px #7775)}.hero-lockup .hero-name{font:500 clamp(42px,7vw,76px)/.9 "Cormorant Garamond",serif;letter-spacing:.2em;margin-left:.2em;color:#96999a;text-shadow:0 1px #fff,0 2px 1px #8885}.hero-lockup .hero-silver{font:600 17px/1.2 "DM Sans",sans-serif;letter-spacing:.48em;margin:.15em 0 0 .48em;color:#292b2d}.eyebrow{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:#777b7e;margin:0 0 18px}
 .monogram{width:110px;height:110px;margin:0 auto 13px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(140deg,#fff 5%,#c5c7c8 34%,#8d9194 52%,#f9f9f8 76%,#a3a6a8);box-shadow:inset 0 1px 1px #fff,0 8px 25px #7773;border:1px solid #b8babc;color:#777b7e;font:600 66px "Cormorant Garamond",serif;letter-spacing:-.1em;padding-right:7px;text-shadow:0 1px 1px #fff}
 h1{font:500 clamp(46px,8vw,86px)/.85 "Cormorant Garamond",serif;letter-spacing:.16em;margin:0 0 2px 0;color:#8c9092;text-shadow:0 1px #fff,0 2px 1px #8885}
 .hero-silver{font:500 clamp(18px,3vw,27px)/1.1 "Cormorant Garamond",serif;letter-spacing:.48em;margin-left:.48em;color:#292b2d}
@@ -43,7 +43,7 @@ h1{font:500 clamp(46px,8vw,86px)/.85 "Cormorant Garamond",serif;letter-spacing:.
 .save{display:inline-flex;align-items:center;gap:9px;margin-top:22px;padding:12px 17px;border:1px solid #c7c8c6;background:linear-gradient(135deg,#fff,#e8e8e5);color:#45494b;text-decoration:none;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;box-shadow:inset 0 1px #fff;cursor:pointer}
 footer{position:relative;padding:25px 0 34px;text-align:center;color:#898d8e;font-size:9px;letter-spacing:.2em;text-transform:uppercase}footer:before{content:"";display:block;height:1px;margin:0 auto 22px;max-width:380px;background:linear-gradient(90deg,transparent,#c4c5c2,transparent)}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;background:#303436;color:white;padding:11px 17px;font-size:12px;pointer-events:none;transition:.25s;z-index:5}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:680px){.shell{width:min(100% - 24px,540px)}header{padding-top:20px}.header-note{max-width:120px;line-height:1.6;font-size:8px}.hero{min-height:410px;padding:55px 15px 70px;margin-top:16px}.hero:before,.hero:after{width:210px;height:210px}.hero-logo{max-height:190px}.actions{gap:7px}.action{flex-direction:column;gap:7px;padding:14px 6px;font-size:9px;letter-spacing:.04em}.content{grid-template-columns:1fr;gap:12px}.panel{padding:25px 22px}.wave{height:60px}}
+@media(max-width:680px){.shell{width:min(100% - 24px,540px)}header{padding-top:20px}.header-note{max-width:120px;line-height:1.6;font-size:8px}.hero{min-height:410px;padding:55px 15px 70px;margin-top:16px}.hero:before,.hero:after{width:210px;height:210px}.hero-lockup .hero-mark{font-size:88px}.hero-lockup .hero-name{font-size:54px}.hero-lockup .hero-silver{font-size:13px}.actions{gap:7px}.action{flex-direction:column;gap:7px;padding:14px 6px;font-size:9px;letter-spacing:.04em}.content{grid-template-columns:1fr;gap:12px}.panel{padding:25px 22px}.wave{height:60px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 </style>
 </head>
@@ -51,14 +51,14 @@ footer{position:relative;padding:25px 0 34px;text-align:center;color:#898d8e;fon
 <div class="topline"></div>
 <div class="shell">
 <header>
-<a class="brand" href="#" aria-label="Golank Silver home"><img class="brand-logo" src="assets/golank-logo.svg" alt="Golank Silver"></a>
+<a class="brand" href="#" aria-label="Golank Silver home"><span class="brand-lockup" aria-hidden="true"><span class="brand-mark">GS</span><span class="brand-name">GOLANK</span><span class="brand-sub">SILVER</span></span></a>
 <div class="header-note">925 Silver Jewellery<br>Wholesale &amp; Manufacturing</div>
 </header>
 <main>
 <section class="hero" aria-labelledby="brand-title">
 <div class="hero-content">
 <p class="eyebrow">Imported Indian Jewellery</p>
-<img class="hero-logo" src="assets/golank-logo.svg" alt="Golank Silver" id="brand-title">
+<div class="hero-lockup" id="brand-title" role="img" aria-label="Golank Silver"><span class="hero-mark">GS</span><span class="hero-name">GOLANK</span><span class="hero-silver">SILVER</span></div>
 <div class="hero-rule"></div>
 <div class="hero-tag">925 Silver Jewellery</div>
 <p class="hero-sub">Wholesale &amp; Manufacturing</p>
