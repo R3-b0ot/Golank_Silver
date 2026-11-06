@@ -15,7 +15,6 @@ A lightweight, responsive digital contact card for Golank Silver, built as a sta
 ## Contact information
 
 - **Business:** Golank Silver
-- **Contact:** Rahul Jain
 - **Business:** Imported Indian Jewellery Wholesale & Manufacturing
 - **Category:** 925 Silver Jewellery
 - **Phone / WhatsApp:** +91 99307 86125
